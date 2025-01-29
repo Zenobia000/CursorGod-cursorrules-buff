@@ -1,45 +1,44 @@
-# Transform your $20 Cursor into a Devin-like AI Assistant
+# 讓你的 $20 Cursor IDE 擁有類 Devin AI 助理的強大功能
 
-This repository gives you everything needed to supercharge your Cursor or Windsurf IDE with **advanced** agentic AI capabilities—similar to the $500/month Devin—but at a fraction of the cost. In under a minute, you’ll gain:
+想要讓你的 Cursor 或 Windsurf IDE 擁有媲美 Devin ($500/月) 的 AI 能力，但又不想花大錢？這個專案提供你所需的一切配置，只需幾個步驟即可讓你的 IDE 擁有：
 
-* Automated planning and self-evolution, so your AI “thinks before it acts” and learns from mistakes
-* Extended tool usage, including web browsing, search engine queries, and LLM-driven text/image analysis
-* [Experimental] Multi-agent collaboration, with o1 doing the planning, and regular Claude/GPT-4o doing the execution.
-
-## Why This Matters
-
-Devin impressed many by acting like an intern who writes its own plan, updates that plan as it progresses, and even evolves based on your feedback. But you don’t need Devin’s $500/month subscription to get most of that functionality. By customizing the .cursorrules file, plus a few Python scripts, you’ll unlock the same advanced features inside Cursor.
-
-## Key Highlights
-
-1.	Easy Setup
-
-   Copy the provided config files into your project folder. Cursor users only need the .cursorrules file. It takes about a minute, and you’ll see the difference immediately.
-
-2.	Planner-Executor Multi-Agent (Experimental)
-
-   Our new [multi-agent branch](https://github.com/grapeot/devin.cursorrules/tree/multi-agent) introduces a high-level Planner (powered by o1) that coordinates complex tasks, and an Executor (powered by Claude/GPT) that implements step-by-step actions. This two-agent approach drastically improves solution quality, cross-checking, and iteration speed.
-
-3.	Extended Toolset
-
-   Includes:
-
-   * Web scraping (Playwright)
-   * Search engine integration (DuckDuckGo)
-   * LLM-powered analysis
-
-   The AI automatically decides how and when to use them (just like Devin).
-
-4.	Self-Evolution
-
-   Whenever you correct the AI, it can update its “lessons learned” in .cursorrules. Over time, it accumulates project-specific knowledge and gets smarter with each iteration. It makes AI a coachable and coach-worthy partner.
-
-## Usage
-
-1.	Copy this repository’s contents into your Cursor or Windsurf project.
-2.	For Cursor, .cursorrules is automatically loaded. For Windsurf, add .windsurfrules plus the Scratchpad for updates.
-3.	Adjust .env with your own API keys, run pip install -r requirements.txt, and you’re all set.
-4.	Start exploring advanced tasks—such as data gathering, building quick prototypes, or cross-referencing external resources—in a fully agentic manner.
+- **自主規劃與進化能力** - AI 會先思考再行動，並從錯誤中學習。
+- **強化的工具整合** - 支援網頁瀏覽、搜尋引擎查詢與 AI 驅動的文本/圖像分析。
 
 
-License: MIT
+## 為什麼這很重要？
+
+Devin 因其類似實習生的工作方式而備受矚目 - 它能自主規劃、根據進度調整計畫，還能從回饋中成長。但其實不需花費 $500/月，就能在 Cursor 中實現類似功能。只要適當設定 `.cursorrules` 檔案和幾個 Python 腳本，就能解鎖這些進階特性。
+
+## 主要特色
+
+### **快速部署**
+將提供的設定檔複製到專案資料夾即可。Cursor 使用者只需要 `.cursorrules` 檔案。一分鐘內即可完成設定，立即體驗升級效果。
+
+### **擴充工具組**
+
+包含：
+- **網頁爬蟲**（Playwright）
+- **搜尋引擎整合**（DuckDuckGo）
+- **AI 分析能力**
+
+AI 會自動判斷何時使用適當工具（就像 Devin 一樣）。
+
+### **自我進化**
+
+每當你糾正 AI 時，它會在 `.cursorrules` 中更新「經驗教訓」。隨著時間推移，AI 會累積專案相關知識，變得越來越聰明。這讓 AI 成為一個可教導也值得指導的夥伴。
+
+## 使用方式
+
+1. **將此專案內容複製到你的 Cursor 或 Windsurf 專案中**。
+2. **Cursor 會自動載入 `.cursorrules`；Windsurf 則需額外添加 `.windsurfrules` 和 `Scratchpad`**。
+3. **在 `.env` 中設定你的 API 金鑰，執行**：
+   ```sh
+   pip install -r requirements.txt
+   ```
+   即完成設定。
+4. **開始探索進階任務** - 無論是資料收集、快速原型開發，還是外部資源引用，都能以全自動化的方式進行。
+
+## 授權條款
+
+本專案採用 MIT 授權條款。
