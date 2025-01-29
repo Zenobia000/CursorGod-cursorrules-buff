@@ -26,7 +26,7 @@ jobs:
 
     - name: Copy environment file
       run: |
-        cp .env .env
+        cp .env.example .env
 
     - name: Run tests
       env:
